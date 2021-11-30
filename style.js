@@ -53,16 +53,16 @@ const objects = [
 ];
 
 const events = [
-  'drowned',
-  'died',
-  'broke its leg',
-  'got lost',
-  'disappeared',
-  'exploded',
-  'needed a glowup',
-  'asked me for a haircut',
-  'caught on fire',
-  'got launched into space',
+  'drowned.',
+  'died.',
+  'broke its leg.',
+  'got lost.',
+  'disappeared.',
+  'exploded.',
+  'needed a glowup.',
+  'asked me for a haircut.',
+  'caught on fire.',
+  'got launched into space.',
 ];
 
 const excuseEnd = [
@@ -75,6 +75,16 @@ const excuseEnd = [
   'Maybe next week instead?',
 ];
 
-const randomExcuseStart = excuseStart.sort((a, b) => 0.5 - Math.random());
+const theExcuse = document.querySelector('.the-excuse');
+const generateButton = document.querySelector('.generate');
 
-console.log(randomExcuseStart[0]);
+generateButton.addEventListener('click', () => {
+  const randomExcuseStart = excuseStart.sort((a, b) => 0.5 - Math.random());
+  const randomPreposition = prepositions.sort((a, b) => 0.5 - Math.random());
+  const randomSubject = subjects.sort((a, b) => 0.5 - Math.random());
+  const randomObject = objects.sort((a, b) => 0.5 - Math.random());
+  const randomEvent = events.sort((a, b) => 0.5 - Math.random());
+  const randomExcuseEnd = excuseEnd.sort((a, b) => 0.5 - Math.random());
+
+  theExcuse.innerHTML = `${randomExcuseStart[0]} ${randomPreposition[0]} ${randomSubject[0]} ${randomObject[0]} ${randomEvent[0]} ${randomExcuseEnd[0]}`;
+});
