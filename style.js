@@ -9,7 +9,7 @@ const excuseStart = [
 ];
 
 const prepositions = [
-  'I have plans with',
+  'I did not forsee that',
   'I forgot that',
   'I just remembered that',
   'I overslept and discovered that',
@@ -50,12 +50,13 @@ const objects = [
   'TV',
   'computer',
   'phone',
+  'imaginary friend',
 ];
 
 const events = [
   'drowned.',
   'died.',
-  'broke its leg.',
+  'broke their leg.',
   'got lost.',
   'disappeared.',
   'exploded.',
@@ -63,6 +64,7 @@ const events = [
   'asked me for a haircut.',
   'caught on fire.',
   'got launched into space.',
+  'got their Hogwarts acceptance letter',
 ];
 
 const excuseEnd = [
