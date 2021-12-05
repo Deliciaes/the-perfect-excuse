@@ -1,8 +1,67 @@
+@font-face {
+  font-family: 'Special Elite';
+  src: url('SpecialElite-Regular.woff2') format('woff2'),
+    url('SpecialElite-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
   background-color: black;
   color: white;
   text-align: center;
+  max-width: 1200px;
+  margin: auto;
 }
 
-.generate {
+.the-excuse {
+  font-size: 48px;
+}
+
+.excuse-confirm {
+  opacity: 0;
+  margin: 40px;
+}
+.gallery-container {
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.gallery-row {
+  align-items: flex-start;
+}
+
+.gallery-row img {
+  width: 150px;
+  height: 150px;
+  padding: 10px;
+}
+
+#card {
+  width: 600px;
+  height: 600px;
+  background: none;
+  font-family: 'Special Elite';
+  font-size: 34px;
+  border: 1px solid #d3d3d3;
+}
+
+.card-container {
+  display: block;
+  opacity: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .gallery-row img {
+    width: 80px;
+    height: 80px;
+  }
+
+  #selectedImg {
+    width: 90vw;
+  }
 }
