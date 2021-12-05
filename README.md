@@ -1,8 +1,8 @@
-INSERT MANDATORY GIF
+<img src="https://media0.giphy.com/media/E90GssJoIqMRW/giphy.gif">
 
-# Project Title
+# The Perfect Excuse
 
-Text about the project. This would also be a great place to link the game on Netlify.
+Have you ever been in the situation where you just don't want to do something but you don't have a good excuse not to? Well, fear no more! This Perfect Excuse generator will get you out of any obligations.
 
 # Installation
 
