@@ -6,7 +6,7 @@ Have you ever been in the situation where you just don't want to do something bu
 
 # Installation
 
-Add the installation instructions.
+No installation needed. Just visit https://theperfectexcuse.netlify.app
 
 # Code Review
 
