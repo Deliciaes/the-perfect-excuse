@@ -103,27 +103,31 @@ generateButton.addEventListener('click', () => {
     canvas.height = canvas.getBoundingClientRect().height;
     const ctx = canvas.getContext('2d');
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.globalAlpha = 0.5;
-    ctx.fillRect(0, 5, 600, 50);
-    ctx.fillRect(0, 62, 600, 50);
-    ctx.fillRect(0, 515, 600, 50);
-    ctx.globalAlpha = 1.0;
-    ctx.font = '34px myFont';
-    ctx.fillStyle = 'white';
-    ctx.fillText(`${randomExcuseStart[0]} ${randomPreposition[0]}`, 5, 40, 580);
-    ctx.fillText(
-      `${randomSubject[0]} ${randomObject[0]} ${randomEvent[0]}`,
-      5,
-      95,
-      580
-    );
-    ctx.fillText(`${randomExcuseEnd[0]}`, 5, 550, 580);
     const images = document.querySelectorAll('#gallery-img');
     images.forEach((image) => {
       image.addEventListener('click', () => {
-        canvas.style.background = `url(${image.src})`;
-        const cardContainer = document.querySelector('.card-container');
-        cardContainer.style.opacity = '1';
+        ctx.fillStyle = 'black';
+        ctx.drawImage(image, 0, 0);
+        ctx.globalAlpha = 0.5;
+        ctx.fillRect(0, 5, 600, 50);
+        ctx.fillRect(0, 62, 600, 50);
+        ctx.fillRect(0, 515, 600, 50);
+        ctx.globalAlpha = 1.0;
+        ctx.font = '34px myFont';
+        ctx.fillStyle = 'white';
+        ctx.fillText(
+          `${randomExcuseStart[0]} ${randomPreposition[0]}`,
+          5,
+          40,
+          580
+        );
+        ctx.fillText(
+          `${randomSubject[0]} ${randomObject[0]} ${randomEvent[0]}`,
+          5,
+          95,
+          580
+        );
+        ctx.fillText(`${randomExcuseEnd[0]}`, 5, 550, 580);
       });
     });
   });
@@ -131,7 +135,9 @@ generateButton.addEventListener('click', () => {
 
 const galleryButton = document.querySelector('.gallery-button');
 const showGallery = document.querySelector('.gallery-container');
+const cardContainer = document.querySelector('.card-container');
 
 galleryButton.addEventListener('click', () => {
   showGallery.style.opacity = '1';
+  cardContainer.style.opacity = '1';
 });
