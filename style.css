@@ -64,4 +64,9 @@ body {
   #selectedImg {
     width: 90vw;
   }
+
+  #card {
+    width: 300px;
+    height: 300px;
+  }
 }
