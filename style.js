@@ -79,7 +79,7 @@ const excuseEnd = [
 
 const theExcuse = document.querySelector('.the-excuse');
 const generateButton = document.querySelector('.generate');
-const excuseConfirm = document.querySelector('.excuse-confirm');
+const excuseContainer = document.querySelector('.excuse-container');
 
 generateButton.addEventListener('click', () => {
   const randomExcuseStart = excuseStart.sort((a, b) => 0.5 - Math.random());
@@ -92,67 +92,59 @@ generateButton.addEventListener('click', () => {
   const finishedExcuse = `${randomExcuseStart[0]} ${randomPreposition[0]} ${randomSubject[0]} ${randomObject[0]} ${randomEvent[0]} ${randomExcuseEnd[0]}`;
   theExcuse.innerHTML = finishedExcuse;
 
-  excuseConfirm.style.opacity = '1';
+  excuseContainer.style.visibility = 'visible';
 
+  const canvas = document.getElementById('card');
+  const images = document.querySelectorAll('#gallery-img');
+  const ctx = canvas.getContext('2d');
   const myFont = new FontFace('myFont', 'url(font/SpecialElite-Regular.woff)');
 
   myFont.load().then(function (font) {
     document.fonts.add(font);
-    const canvas = document.getElementById('card');
     canvas.width = canvas.getBoundingClientRect().width;
     canvas.height = canvas.getBoundingClientRect().height;
-    const ctx = canvas.getContext('2d');
+
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    const images = document.querySelectorAll('#gallery-img');
     images.forEach((image) => {
-      image.addEventListener('click', () => {
-        ctx.fillStyle = 'black';
-        ctx.drawImage(image, 0, 0);
-        ctx.globalAlpha = 0.5;
-        ctx.fillRect(0, 0, 300, 80);
-        ctx.fillRect(0, 250, 300, 50);
-        ctx.font = '18px myFont';
-        ctx.fillStyle = 'white';
-        ctx.globalAlpha = 1.0;
-        ctx.fillText(`${randomExcuseStart[0]}`, 5, 25, 295);
-        ctx.fillText(`${randomPreposition[0]}`, 5, 47, 295);
-        ctx.fillText(
-          `${randomSubject[0]} ${randomObject[0]} ${randomEvent[0]}`,
-          5,
-          69,
-          295
-        );
-        ctx.fillText(`${randomExcuseEnd[0]}`, 5, 280, 295);
-        /*
-        ctx.fillRect(5, 5, 590, 50);
-        ctx.fillRect(5, 62, 590, 50);
-        ctx.fillRect(5, 515, 590, 50);
-        ctx.font = '34px myFont';
-        ctx.fillStyle = 'white';
-        ctx.globalAlpha = 1.0;
-        ctx.fillText(
-          `${randomExcuseStart[0]} ${randomPreposition[0]}`,
-          5,
-          40,
-          580
-        );
-        ctx.fillText(
-          `${randomSubject[0]} ${randomObject[0]} ${randomEvent[0]}`,
-          5,
-          95,
-          580
-        );
-        ctx.fillText(`${randomExcuseEnd[0]}`, 5, 550, 580);*/
+      ctx.fillStyle = 'black';
+      ctx.drawImage(image, 0, 0);
+      ctx.globalAlpha = 0.5;
+      ctx.fillRect(0, 0, 300, 80);
+      ctx.fillRect(0, 250, 300, 50);
+      ctx.font = '18px myFont';
+      ctx.fillStyle = 'white';
+      ctx.globalAlpha = 1.0;
+      ctx.fillText(`${randomExcuseStart[0]}`, 5, 25, 295);
+      ctx.fillText(`${randomPreposition[0]}`, 5, 47, 295);
+      ctx.fillText(
+        `${randomSubject[0]} ${randomObject[0]} ${randomEvent[0]}`,
+        5,
+        69,
+        295
+      );
+      ctx.fillText(`${randomExcuseEnd[0]}`, 5, 280, 295);
+      images.forEach((image) => {
+        image.addEventListener('click', () => {
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+          ctx.fillStyle = 'black';
+          ctx.drawImage(image, 0, 0);
+          ctx.globalAlpha = 0.5;
+          ctx.fillRect(0, 0, 300, 80);
+          ctx.fillRect(0, 250, 300, 50);
+          ctx.font = '18px myFont';
+          ctx.fillStyle = 'white';
+          ctx.globalAlpha = 1.0;
+          ctx.fillText(`${randomExcuseStart[0]}`, 5, 25, 295);
+          ctx.fillText(`${randomPreposition[0]}`, 5, 47, 295);
+          ctx.fillText(
+            `${randomSubject[0]} ${randomObject[0]} ${randomEvent[0]}`,
+            5,
+            69,
+            295
+          );
+          ctx.fillText(`${randomExcuseEnd[0]}`, 5, 280, 295);
+        });
       });
     });
   });
-});
-
-const galleryButton = document.querySelector('.gallery-button');
-const showGallery = document.querySelector('.gallery-container');
-const cardContainer = document.querySelector('.card-container');
-
-galleryButton.addEventListener('click', () => {
-  showGallery.style.opacity = '1';
-  cardContainer.style.opacity = '1';
 });

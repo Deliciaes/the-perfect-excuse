@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Coda:wght@400;800&family=Hind&display=swap');
+
 @font-face {
   font-family: 'Special Elite';
   src: url('SpecialElite-Regular.woff2') format('woff2'),
@@ -8,23 +10,47 @@
 }
 
 body {
-  background-color: black;
-  color: white;
+  background-color: #141118;
+  color: #fae5c7;
+  font-family: 'Hind';
   text-align: center;
   max-width: 1200px;
   margin: auto;
 }
 
+.excuse-container {
+  visibility: hidden;
+  margin-top: 20px;
+}
+
+h1 {
+  font-family: 'Coda';
+  color: #ec9a29;
+}
+
+h3 {
+  color: #ec9a29;
+}
+
+button {
+  background-color: #ea638c;
+  border: none;
+  color: #141118;
+  font-family: 'Coda';
+  font-size: 18px;
+}
+
 .the-excuse {
-  font-size: 48px;
+  font-size: 18px;
+  margin: 4px;
+  color: #adf7b6;
+  padding: 5px;
 }
 
 .excuse-confirm {
-  opacity: 0;
-  margin: 40px;
+  margin: 10px;
 }
 .gallery-container {
-  opacity: 0;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -51,9 +77,7 @@ body {
 
 .card-container {
   display: block;
-  opacity: 0;
 }
-
 @media screen and (max-width: 768px) {
   .gallery-row img {
     width: 80px;
