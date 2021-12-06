@@ -36,18 +36,17 @@ body {
 }
 
 .gallery-row img {
-  width: 150px;
-  height: 150px;
-  padding: 10px;
+  width: 80px;
+  height: 80px;
+  padding: 8px;
 }
 
 #card {
-  width: 600px;
-  height: 600px;
+  width: 300px;
+  height: 300px;
   background: none;
   font-family: 'Special Elite';
   font-size: 34px;
-  border: 1px solid #d3d3d3;
 }
 
 .card-container {
@@ -59,14 +58,5 @@ body {
   .gallery-row img {
     width: 80px;
     height: 80px;
-  }
-
-  #selectedImg {
-    width: 90vw;
-  }
-
-  #card {
-    width: 300px;
-    height: 300px;
   }
 }

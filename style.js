@@ -109,12 +109,27 @@ generateButton.addEventListener('click', () => {
         ctx.fillStyle = 'black';
         ctx.drawImage(image, 0, 0);
         ctx.globalAlpha = 0.5;
-        ctx.fillRect(0, 5, 600, 50);
-        ctx.fillRect(0, 62, 600, 50);
-        ctx.fillRect(0, 515, 600, 50);
+        ctx.fillRect(0, 0, 300, 80);
+        ctx.fillRect(0, 250, 300, 50);
+        ctx.font = '18px myFont';
+        ctx.fillStyle = 'white';
         ctx.globalAlpha = 1.0;
+        ctx.fillText(`${randomExcuseStart[0]}`, 5, 25, 295);
+        ctx.fillText(`${randomPreposition[0]}`, 5, 47, 295);
+        ctx.fillText(
+          `${randomSubject[0]} ${randomObject[0]} ${randomEvent[0]}`,
+          5,
+          69,
+          295
+        );
+        ctx.fillText(`${randomExcuseEnd[0]}`, 5, 280, 295);
+        /*
+        ctx.fillRect(5, 5, 590, 50);
+        ctx.fillRect(5, 62, 590, 50);
+        ctx.fillRect(5, 515, 590, 50);
         ctx.font = '34px myFont';
         ctx.fillStyle = 'white';
+        ctx.globalAlpha = 1.0;
         ctx.fillText(
           `${randomExcuseStart[0]} ${randomPreposition[0]}`,
           5,
@@ -127,7 +142,7 @@ generateButton.addEventListener('click', () => {
           95,
           580
         );
-        ctx.fillText(`${randomExcuseEnd[0]}`, 5, 550, 580);
+        ctx.fillText(`${randomExcuseEnd[0]}`, 5, 550, 580);*/
       });
     });
   });
