@@ -78,6 +78,42 @@ button {
 .card-container {
   display: block;
 }
+.emoticon-container {
+}
+.animation #zero {
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+  animation: none;
+}
+
+#one {
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+  animation: none;
+}
+
+@keyframes bounceUp {
+  0% {
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  70% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(3px);
+  }
+}
+
+.about-me {
+  font-style: italic;
+}
+li {
+  list-style: none;
+  font-style: normal;
+}
+
 @media screen and (max-width: 768px) {
   .gallery-row img {
     width: 80px;

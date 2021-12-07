@@ -65,6 +65,7 @@ const events = [
   'caught on fire.',
   'got launched into space.',
   'got their Hogwarts acceptance letter',
+  'said no.',
 ];
 
 const excuseEnd = [
@@ -103,6 +104,7 @@ generateButton.addEventListener('click', () => {
     document.fonts.add(font);
     canvas.width = canvas.getBoundingClientRect().width;
     canvas.height = canvas.getBoundingClientRect().height;
+    let ratio = 1;
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     images.forEach((image) => {
@@ -146,5 +148,34 @@ generateButton.addEventListener('click', () => {
         });
       });
     });
+  });
+});
+
+const footer = document.querySelector('footer');
+const animation = document.getElementById('animation');
+const ones = document.querySelectorAll('#one');
+const zeros = document.querySelectorAll('#zero');
+
+footer.addEventListener('mouseover', () => {
+  ones.forEach((one) => {
+    one.style.animation = 'bounceUp 2s linear infinite';
+  });
+});
+
+footer.addEventListener('mouseover', () => {
+  zeros.forEach((zero) => {
+    zero.style.animation = 'bounceUp 1.6s linear infinite';
+  });
+});
+
+footer.addEventListener('mouseleave', () => {
+  ones.forEach((one) => {
+    one.style.animation = 'none';
+  });
+});
+
+footer.addEventListener('mouseleave', () => {
+  zeros.forEach((zero) => {
+    zero.style.animation = 'none';
   });
 });
