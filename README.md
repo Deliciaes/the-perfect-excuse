@@ -20,5 +20,5 @@ No installation needed. Just visit https://theperfectexcuse.netlify.app
 
 Tested by the following people:
 
-1. Jane Doe
+1. Nelly Svarvare Petrén
 2. John Doe
