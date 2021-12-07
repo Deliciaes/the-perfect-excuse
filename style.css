@@ -16,16 +16,26 @@ body {
   text-align: center;
   max-width: 1200px;
   margin: auto;
+  position: relative;
+  min-height: 100vh;
 }
 
 .excuse-container {
-  visibility: hidden;
   margin-top: 20px;
+}
+
+.intro {
+  font-size: 18px;
+  height: 220px;
+  margin-top: 80px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 h1 {
   font-family: 'Coda';
   color: #ec9a29;
+  font-size: 32px;
 }
 
 h3 {
@@ -39,8 +49,20 @@ button {
   font-family: 'Coda';
   font-size: 18px;
   padding: 8px;
+  cursor: pointer;
+  text-decoration: none;
+}
+button:hover {
+  background-color: #adf7b6;
 }
 
+#show-hide {
+  display: none;
+}
+
+.pink-font {
+  color: #ea638c;
+}
 .the-excuse {
   font-size: 18px;
   margin: 4px;
@@ -51,16 +73,21 @@ button {
 
 .download {
   margin: 15px;
+  margin-top: 50px;
+  display: none;
+}
+
+.download-url {
+  text-decoration: none;
 }
 
 .excuse-confirm {
   margin: 10px;
 }
 .gallery-container {
-  display: flex;
+  display: none;
   justify-content: center;
   flex-wrap: wrap;
-  position: relative;
 }
 
 .gallery-row {
@@ -76,13 +103,11 @@ button {
 #card {
   width: 300px;
   height: 300px;
-  background: none;
-  font-family: 'Special Elite';
-  font-size: 34px;
+  display: none;
+  margin: auto;
 }
 
 .card-container {
-  display: block;
 }
 .emoticon-container {
 }
@@ -112,17 +137,62 @@ button {
   }
 }
 
-.about-me {
+.useless-web {
   font-style: italic;
+  font-size: 14px;
+}
+ul {
 }
 li {
   list-style: none;
   font-style: normal;
+  display: inline;
+  margin: 5px;
 }
 
+li a {
+  color: #ea638c;
+  font-style: bold;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+li a:hover {
+  color: #ec9a29;
+}
+
+.about {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  bottom: 30px;
+  text-align: center;
+}
+
+.about-button {
+  background-color: transparent;
+  color: #ec9a29;
+}
+
+.about-button:hover {
+  background-color: transparent;
+  color: #ea638c;
+}
+footer {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  bottom: 30px;
+  text-align: center;
+  display: none;
+}
 @media screen and (max-width: 768px) {
   .gallery-row img {
-    width: 80px;
-    height: 80px;
+    width: 75px;
+    height: 75px;
   }
 }

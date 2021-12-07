@@ -7,25 +7,31 @@
     <link rel="stylesheet" href="style.css" />
     <title>The Perfect Excuse</title>
   </head>
+  <h1>The Perfect Excuse</h1>
   <body>
-    <div>
-      <h1>The Perfect Excuse</h1>
+    <div class="intro">
       <p>
-        Ever wanted to not do something but cannot come up with a good excuse?
+        Ever wanted to <span class="pink-font">not do something</span>  but cannot come up with a good excuse?
       </p>
       <p>
-        With my Perfect Excuse generator you never have to worry about that
+        With  <span class="pink-font">The Perfect Excuse </span> you never have to worry about that
         again!
       </p>
-      <button class="generate">Generate Excuse</button>
+      <p>
+        Simply <span class="pink-font">generate an excuse and send it to the person you are trying to avoid.</span> It's never been easier!
+      </p>
     </div>
     <div class="excuse-container">
       <div class="card-container">
         <canvas id="card">
           Your browser does not support the canvas element.
-        </canvas>
+        </canvas></div>
+        <button class="generate">Generate Excuse</button>
+
+        <a class="download-url" href="" download
+          ><button class="download">Download Image</button></a
+        ><div id="show-hide">Change background:</div>
         <div class="gallery-container">
-          <div class="gallery-row"></div>
           <div class="gallery-row">
             <img
               src="images/sad-dog.png"
@@ -42,21 +48,7 @@
           </div>
           <div class="gallery-row">
             <img
-              src="images/field.png"
-              id="gallery-img"
-              alt="photo of a sad dog"
-            />
-          </div>
-          <div class="gallery-row">
-            <img
               src="images/cat.png"
-              id="gallery-img"
-              alt="photo of a sad dog"
-            />
-          </div>
-          <div class="gallery-row">
-            <img
-              src="images/rainy-window.png"
               id="gallery-img"
               alt="photo of a sad dog"
             />
@@ -83,20 +75,18 @@
             />
           </div>
         </div>
-        <a class="download-url" href="" download
-          ><button class="download">Download Image</button></a
-        >
-      </div>
-      <div class="excuse-confirm">
+
+      <div class="excuse-confirm" id="show-hide">
         Or if you just want to copy paste the text:
       </div>
-      <div class="the-excuse"></div>
+      <div class="the-excuse" id="show-hide"></div>
     </div>
+<div class="about"><button class="about-button">About</button>  </div>
     <footer>
       <div class="emoticon-container">
         <svg
-          width="227"
-          height="228"
+          width="171"
+          height="171"
           viewBox="0 0 227 228"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -919,12 +909,10 @@
             </linearGradient>
           </defs>
         </svg>
-
+<div class="useless-web">Made by Emma Ramstedt. Assignment theme "The useless web", Web development course @ Yrgo.</div>
         <div class="about-me">
-          "The useless web", Yrgo WU21. <br />
-          Created by Emma Ramstedt.<lu>
-            <li><a href="#">GitHub</a></li>
-            <li><a href="#">LinkedIn</a></li>
+            <li><a href="https://github.com/Deliciaes/the-perfect-excuse">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/emmaramstedt/">LinkedIn</a></li>
           </lu>
         </div>
       </div>
