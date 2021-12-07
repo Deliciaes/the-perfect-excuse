@@ -202,7 +202,7 @@ const ones = document.querySelectorAll('#one');
 const zeros = document.querySelectorAll('#zero');
 
 about.addEventListener('click', () => {
-  footer.style.display = 'block';
+  footer.style.display = 'flex';
   about.style.display = 'none';
 });
 
