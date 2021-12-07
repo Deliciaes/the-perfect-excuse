@@ -38,6 +38,7 @@ button {
   color: #141118;
   font-family: 'Coda';
   font-size: 18px;
+  padding: 8px;
 }
 
 .the-excuse {
@@ -45,6 +46,11 @@ button {
   margin: 4px;
   color: #adf7b6;
   padding: 5px;
+  padding-bottom: 25px;
+}
+
+.download {
+  margin: 15px;
 }
 
 .excuse-confirm {

@@ -125,6 +125,9 @@ generateButton.addEventListener('click', () => {
         295
       );
       ctx.fillText(`${randomExcuseEnd[0]}`, 5, 280, 295);
+      const dataURL = canvas.toDataURL();
+      const downloadURL = document.querySelector('.download-url');
+      downloadURL.href = dataURL;
       images.forEach((image) => {
         image.addEventListener('click', () => {
           ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -145,6 +148,9 @@ generateButton.addEventListener('click', () => {
             295
           );
           ctx.fillText(`${randomExcuseEnd[0]}`, 5, 280, 295);
+          const dataURL = canvas.toDataURL();
+          const downloadURL = document.querySelector('.download-url');
+          downloadURL.href = dataURL;
         });
       });
     });
@@ -152,7 +158,6 @@ generateButton.addEventListener('click', () => {
 });
 
 const footer = document.querySelector('footer');
-const animation = document.getElementById('animation');
 const ones = document.querySelectorAll('#one');
 const zeros = document.querySelectorAll('#zero');
 
