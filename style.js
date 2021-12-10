@@ -195,3 +195,37 @@ generateButton.addEventListener('click', () => {
     });
   });
 });
+
+const footer = document.querySelector('footer');
+const about = document.querySelector('.about');
+const ones = document.querySelectorAll('#one');
+const zeros = document.querySelectorAll('#zero');
+
+about.addEventListener('click', () => {
+  footer.style.display = 'block';
+  about.style.display = 'none';
+});
+
+footer.addEventListener('mouseover', () => {
+  ones.forEach((one) => {
+    one.style.animation = 'bounceUp 2s linear infinite';
+  });
+});
+
+footer.addEventListener('mouseover', () => {
+  zeros.forEach((zero) => {
+    zero.style.animation = 'bounceUp 1.6s linear infinite';
+  });
+});
+
+footer.addEventListener('mouseleave', () => {
+  ones.forEach((one) => {
+    one.style.animation = 'none';
+  });
+});
+
+footer.addEventListener('mouseleave', () => {
+  zeros.forEach((zero) => {
+    zero.style.animation = 'none';
+  });
+});

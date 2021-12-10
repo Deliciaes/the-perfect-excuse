@@ -106,9 +106,23 @@ button:hover {
   display: none;
   margin: auto;
 }
-.zero {
-  animation: bounceUp 1.6s linear infinite;
+
+.card-container {
 }
+.emoticon-container {
+}
+.animation #zero {
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+  animation: none;
+}
+
+#one {
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+  animation: none;
+}
+
 @keyframes bounceUp {
   0% {
   }
@@ -135,6 +149,7 @@ li {
   display: inline;
   margin: 5px;
 }
+
 li a {
   color: #ea638c;
   font-style: bold;
