@@ -111,16 +111,16 @@ button:hover {
 }
 .emoticon-container {
 }
-.animation #zero {
+.zero-animation {
   transform-box: fill-box;
   transform-origin: 50% 50%;
-  animation: none;
+  animation: bounceUp 1.6s linear infinite;
 }
 
-#one {
+.one-animation {
   transform-box: fill-box;
   transform-origin: 50% 50%;
-  animation: none;
+  animation: bounceUp 1.3s linear infinite;
 }
 
 @keyframes bounceUp {
@@ -178,7 +178,7 @@ footer {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  display: none;
+  display: visible;
   padding-top: 20px;
 }
 @media screen and (max-width: 768px) {
