@@ -1,3 +1,5 @@
+/*the main difference here is that on mobile the canvas is smaller. i tried to scale the canvas size in css but the contents inside the canvas did not scale accordingly, so i chose to copy paste the canvas generator and let it run in a smaller size.*/
+
 if (window.screen.width < 600) {
   /* generate the excuse */
   generateButton.addEventListener('click', () => {
@@ -39,6 +41,7 @@ if (window.screen.width < 600) {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       images.forEach((image) => {
         ctx.fillStyle = 'black';
+        /*the numbers in the rows below inside the brackets are coordinates*/
         ctx.drawImage(image, 0, 0);
         ctx.globalAlpha = 0.5;
         ctx.fillRect(0, 0, 350, 80);

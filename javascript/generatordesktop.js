@@ -85,6 +85,7 @@ if (window.screen.width > 600) {
           image.addEventListener('click', () => {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             ctx.fillStyle = 'black';
+            /*the numbers in the rows below inside the brackets are coordinates*/
             ctx.drawImage(image, 0, 0);
             ctx.globalAlpha = 0.5;
             ctx.fillRect(0, 0, 600, 100);

@@ -7,6 +7,7 @@ about.addEventListener('click', () => {
   about.style.display = 'none';
 });
 
+/* animating specific path classes inside the SVG file which in turn applies css animation styling when the cursor is inside the footer*/
 emma.addEventListener('load', () => {
   const svgContent = emma.contentDocument;
   const zeros = svgContent.querySelectorAll('.zero');
@@ -22,6 +23,8 @@ emma.addEventListener('load', () => {
       zero.classList.add('zero-animation');
     });
   });
+
+  /*remove the animation when the cursor leaves the footer*/
 
   footer.addEventListener('mouseleave', () => {
     zeros.forEach((zero) => {
