@@ -2,6 +2,8 @@
 
 # The Perfect Excuse
 
+My first javascript project for shcool. The theme: "The useless web".
+
 Have you ever been in the situation where you just don't want to do something but you don't have a good excuse not to? Well, fear no more! This Perfect Excuse generator will get you out of any obligations.
 
 # Installation
